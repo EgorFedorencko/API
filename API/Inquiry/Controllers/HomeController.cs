@@ -25,6 +25,9 @@ namespace InquiryService.Controllers
         [HttpPost]
         public IActionResult AddInquiry(Inquiry inquiry)
         {
+            if (inquiry.amout == 0 || inquiry.UAN == null || inquiry.department_address == null)
+                return BadRequest();
+
             // ЛОГИРУЕМ ДАТУ, IP, ВХОДНЫЕ ДАННЫЕ
             _logger.LogInformation(JsonConvert.SerializeObject(
                     new
