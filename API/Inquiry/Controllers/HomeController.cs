@@ -29,7 +29,7 @@ namespace InquiryService.Controllers
             _logger.LogInformation(JsonConvert.SerializeObject(
                     new
                     {
-                        DateTime = DateTime.Now.ToString("dd.MM.yyyy hh:mm:ss.fff"),
+                        DateTime = DateTime.Now.ToString("dd.MM.yyyy hh:mm:ss.fff"), // ЛОКАЛЬНОЕ ВРЕМЯ СИСТЕМЫ
                         IP = _accessor.HttpContext.Connection.RemoteIpAddress.ToString(),
                         Inquiry = new { client_id = inquiry.client_id, amout = inquiry.amout, department_address = inquiry.department_address, UAN = inquiry.UAN }
                     }

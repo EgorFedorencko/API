@@ -10,7 +10,6 @@ namespace InquiryService.Model
 {
     public class Inquiry
     {
-        public Guid Id { get; set; }
         public Guid client_id { get; set; }
         public string department_address { get; set; }
         public decimal amout { get; set; }
